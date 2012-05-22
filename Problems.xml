@@ -1,0 +1,49 @@
+<contest id="d1" monitortype="acm" caption="День 1. 'Системы счисления'" length="180">
+
+<problem id="d1A1" 
+         caption="1. Арабская => Римская" 
+         checker="Problems\Day1\Checker.exe" 
+         testdir="Problems\Day1\A\" 
+         infile="arab.txt" outfile="rim.txt" 
+         testcount="5" 
+         memorylimit="33554432" timelimit="1000" 
+/>
+
+<problem id="d1A2" 
+         caption="2. Римская => Арабская" 
+         checker="Problems\Day1\Checker.exe" 
+         testdir="Problems\Day1\B\" 
+         infile="rim.txt" outfile="arab.txt" 
+         testcount="5" 
+         memorylimit="33554432" timelimit="1000" 
+/>
+
+<problem id="d1A3" 
+         caption="3. Римский калькулятор" 
+         checker="Problems\Day1\Checker.exe" 
+         testdir="Problems\Day1\C\" 
+         infile="rim.in" outfile="rim.out" 
+         testcount="4" 
+         memorylimit="33554432" timelimit="1000" 
+/>
+
+<problem id="d1A4" 
+         caption="4. Десятичная => N-ичная" 
+         checker="Problems\Day1\Checker.exe" 
+         testdir="Problems\Day1\D\" 
+         infile="input.txt" outfile="output.txt" 
+         testcount="30" 
+         memorylimit="33554432" timelimit="1000" 
+/>
+
+<problem id="d1A5" 
+         caption="5. N-ичная => Десятичная" 
+         checker="Problems\Day1\Checker.exe" 
+         testdir="Problems\Day1\E\" 
+         infile="input.txt" outfile="output.txt" 
+         testcount="30" 
+         memorylimit="33554432" timelimit="1000" 
+/>
+
+
+</contest>
