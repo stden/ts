@@ -1,0 +1,66 @@
+<Compiler ID="dpr" 
+         Caption="Borland Delphi v6" 
+         Filter="Delphi Project File (*.dpr)|*.dpr|Any File (*.*)|*.*" 
+         timeout="10000">
+    rdir Compilers\delphi\
+    put A.dpr
+    params -cc A.dpr
+    invoke DCC32.EXE
+    del A.dpr
+    get A.exe
+</Compiler>
+
+<Compiler ID="pas" 
+         Caption="Borland Pascal v7.1" 
+         Filter="Pascal Project File (*.pas)|*.pas|Any File (*.*)|*.*" 
+         timeout="10000">
+    rdir Compilers\pascal\
+    put A.pas
+    params A.pas
+    invoke BPC.exe
+    del A.pas
+    get A.exe
+</Compiler>
+
+<Compiler ID="qb" 
+         Caption="QBasic v4.5" 
+         Filter="QBasic Project File (*.bas)|*.bas|Any File (*.*)|*.*" 
+         timeout="3000">
+    rdir Compilers\qbasic\
+    put A.bas
+    params A.BAS/D/O/T/C:512;
+    invoke BC.exe
+    params A.OBJ;A.EXE;NUL.MAP;BCom45.LIB
+    invoke LINK.exe
+    del A.bas
+    del A.obj
+    get A.exe
+</Compiler>
+
+<Compiler ID="vcpp" 
+         Caption="Microsoft Visual C++ v6.0" 
+         Filter="C++ Code File (*.cpp)|*.cpp|Any File (*.*)|*.*" 
+         timeout="10000">
+    rdir Compilers\vcpp\
+    put A.cpp
+    params /O2 /GX /TP a.cpp
+    env INCLUDE=Include
+    env LIB=Lib
+    invoke cl.exe
+    del A.cpp
+    del A.obj
+    get A.exe
+</Compiler>
+
+<Compiler ID="cpp" 
+         Caption="Borland C/C++ v3.11" 
+         Filter="C++ Code File (*.cpp)|*.cpp|Any File (*.*)|*.*" 
+         timeout="10000">
+    rdir Compilers\cpp\
+    put A.cpp
+    params -ml a.cpp
+    invoke BCC.EXE
+    del A.cpp
+    del A.obj
+    get A.exe
+</Compiler>
